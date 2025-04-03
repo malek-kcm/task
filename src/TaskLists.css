@@ -1,0 +1,163 @@
+/* Conteneur principal pour tout le contenu */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 20px;
+    width: 70%;
+    max-width: 800px;
+    border: 2px solid #5c6bc0;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+   
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+/* Titre de la tâche */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Uniformiser la police */
+    text-align: center;
+    /* Centrer le titre */
+}
+
+/* Bouton "Add Task" */
+.add-task-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    /* Uniformiser la police */
+}
+
+.add-task-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Icône de suppression */
+button.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+ 
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+button.icon-btn:hover {
+    color: #d32f2f;
+}
+
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fce4ec;
+    border-radius: 8px;
+    border: 1px solid #e1bee7;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.task:hover {
+    transform: scale(1.02);
+    background-color: #f8bbd0;
+}
+
+.task h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+ 
+}
+
+.task p {
+    font-size: 0.9rem;
+    color: #777;
+    font-family: Arial, sans-serif;
+
+}
+
+
+.task .date-time {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 5px;
+   
+    font-family: Arial, sans-serif;
+}
+
+
+.about {
+    text-align: center;
+ 
+    margin-top: 20px;
+    color: #5c6bc0;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+   
+    font-size: 1rem;
+ 
+}
+
+.about:hover {
+    color: #3f51b5;
+}
+
+.about p {
+    text-align: center;
+   
+    margin-top: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    /* Uniformiser la police */
+    font-size: 1rem;
+    /* Assurer la même taille de texte */
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .task-list {
+        width: 90%;
+    }
+}
